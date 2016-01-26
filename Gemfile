@@ -15,6 +15,9 @@ end
 #Use bootstrap for styles
 gem 'bootstrap-sass', '3.3.6'
 
+#Use fonti-awesome for icons
+gem 'font-awesome-sass', '4.5.0'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '5.0.4'
 # Use Uglifier as compressor for JavaScript assets
