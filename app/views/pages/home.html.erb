@@ -9,14 +9,14 @@
       <h2 class="text-center">Entrepeneur Membership</h2>
       <h4>Sign up for free and get basic access to the community.</h4>
       <br/>
-      <%= link_to "Sign up as an Entrepeneur", new_user_registration_path, class: 'btn btn-primary btn-lg btn-block' %>
+      <%= link_to "Sign up as an Entrepeneur", new_user_registration_path(plan: @ent_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
     </div>
   </div>
   <div class="col-md-4">
     <div class="well">
       <h2 class="text-center">Corporate Membership</h2>
       <h4>Sign up for the pro account for £10,000 and get access to the community and contact information!</h4>
-      <%= link_to "Sign up as a Corporate", new_user_registration_path, class: 'btn btn-success btn-lg btn-block' %>
+      <%= link_to "Sign up as a Corporate", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
     </div>
   </div>
     <div class="col-md-4">
@@ -24,7 +24,7 @@
       <h2 class="text-center">Academic/NGO Membership</h2>
       <h4>Sign up for free and get basic access to the community.</h4>
       <br/>
-      <%= link_to "Sign up as an Academic/NGO", new_user_registration_path, class: 'btn btn-primary btn-lg btn-block' %>
+      <%= link_to "Sign up as an Academic/NGO", new_user_registration_path(plan: @academic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
     </div>
   </div>
 </div>
