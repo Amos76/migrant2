@@ -1,0 +1,62 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h1 class="text-center">Create Your Profile</h1>
+    <p class="text-center">Be a part of the Migrant Entrepreneur Network and fill out your profile!</p>
+    <div class="well">
+      <%= form_for @profile, url: user_profile_path do |f| %>
+        <div class="form-group">
+          <%= f.label :first_name %>
+          <%= f.text_field :first_name, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :last_name %>
+          <%= f.text_field :last_name, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :country_of_residence %>
+          <%= f.text_field :country_of_residence, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :country_of_origin %>
+          <%= f.text_field :country_of_origin, class: 'form-control' %>
+        </div>
+        <div class="check-box">
+          <%= f.label :own_business %>
+          <%= f.select :own_business, ['Yes', 'No'], {}, class: 'form-control' %>
+        </div>
+        <div class="check-box">
+          <%= f.label :starting_business %>
+          <%= f.select :starting_business, ['Yes', 'No'], {}, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :business_nature %>
+          <%= f.text_area :business_nature, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :services_interest_in %>
+          <%= f.select :services_interest_in, ['Mentorship', 'Mentee', 'Training', 'Partnership'], {}, class: 'form-control' %>
+        </div>
+        <div class="check-box">
+          <%= f.label :promo_video %>
+          <%= f.select :promo_video, ['Yes', 'No'], {}, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :other %>
+          <%= f.text_area :other, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :phone_number %>
+          <%= f.text_field :phone_number, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :contact_email %>
+          <%= f.text_field :contact_email, class: 'form-control' %>
+        </div>
+        
+        <div class="form-group">
+          <%= f.submit "Update Profile", class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
