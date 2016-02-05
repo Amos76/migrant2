@@ -7,15 +7,24 @@
     <h1><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1>
     
     <div class="well profile-block profile-description">
-      <h3>Description</h3>
-      <%= @user.profile.country_of_residence %><br/>
-      <%= @user.profile.country_of_origin %><br/>
-      <%= @user.profile.own_business %><br/>
-      <%= @user.profile.starting_business %><br/>
-      <%= @user.profile.business_nature %><br/>
-      <%= @user.profile.promo_video %><br/>
-      <%= @user.profile.other %><br/>
-      <h3><span class="services_interest_in_icon" ><%= services_interest_in_icon %></span><%= @user.profile.services_interest_in %><br/></h3>
+      <h3>Profile</h3>
+      <h5>Country of Residence</h5>
+        <%= @user.profile.country_of_residence %>
+      <h5>Country of Origin</h5>
+        <%= @user.profile.country_of_origin %>
+      <h5>Business Owner?</h5>
+        <%= @user.profile.own_business %>
+      <h5>Starting a Busines?</h5>
+        <%= @user.profile.starting_business %>
+          
+      <h5>Nature of the Business(es)</h5>
+        <%= @user.profile.business_nature %>
+      <h5>Promotional Video Available</h5>
+        <%= @user.profile.promo_video %>
+      <h5>Other Comments</h5>
+        <%= @user.profile.other %><br/>
+      <h5>Interested in which Service</h5>
+        <h3><span class="services_interest_in_icon" ><%= services_interest_in_icon %></span><%= @user.profile.services_interest_in %><br/></h3>
     </div>
     
     <% if current_user.plan_id == 3 %>
