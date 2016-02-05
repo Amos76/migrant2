@@ -10,7 +10,7 @@
   </head>
   
   <body>
-    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class='container'>
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
@@ -21,8 +21,9 @@
           </button>
           
           <%= link_to root_path, class: 'navbar-brand' do %>
-            <i class="fa fa-users"></i>
-            Migrant Entrepeneurs Network
+            <p class="textColor"><%=image_tag("LogoImage.png", alt: "Migrant Entrepreneurs Logo", class: "favicon")%>Migrant Entrepeneurs Network</p>
+            <!--<i class="fa fa-users"></i>-->
+            
           <% end %>
           
         </div>

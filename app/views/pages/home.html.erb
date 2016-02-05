@@ -1,55 +1,121 @@
-<div class="jumbotron text-center">
-  <h1>Welcome to The Migrant Entrepeneurs Network</h1>
-  <h3>Connecting. Educating. Developing.</h3>
-</div>
 
-<div class="row">
-  <% if user_signed_in? %>
-  
-    <div class="col-md-6">
-      <div class="well">
-        <h2 class="text-center">Your Profile</h2>
-        <% if current_user.profile %>
-          <%= link_to "Edit your profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
-          <%= link_to "View your profile", user_path(current_user), class: 'btn btn-default btn-lg btn-block' %>
-        <% else %>
-          <p>Create your profile so that you can share your information with the community.</p>
-          <%= link_to "Create your profile", new_user_profile_path(current_user), class: 'btn btn-default btn-lg btn-block'%>
-        <% end %>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="well">
-        <h2 class="text-center">The Community</h2>
-        <p>Visit the community to meet other developers, entrepreneurs, and investors!</p>
-        <%= link_to "Visit the community", users_path, class: 'btn btn-default btn-lg btn-block' %>
+
+  <div id="frontPage1">
+    <div class="row" >
+      <div class="col-md-12">
+        <p class="text-center"><%=image_tag("MigrantEnterpreneursLogoClear.png", alt: "Migrant Entrepreneurs Logo") %></p>
+        <h1 class="text-center">Welcome to The Migrant Entrepeneurs Network</h1>
+        <h3 class="text-center">Connecting. Educating. Developing.</h3>
       </div>
     </div>
     
-  <% else %>  
-  
-    <div class="col-md-4">
-      <div class="well">
-        <h2 class="text-center">Entrepeneur Membership</h2>
-        <h4>Sign up for free and get basic access to the community.</h4>
-        <br/>
-        <%= link_to "Sign up as an Entrepeneur", new_user_registration_path(plan: @ent_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
+    <div class="row">
+      <div class="col-md-3 col-md-offset-3">
+        <%= link_to "Learn More", "/#frontPage2", class: 'btn btn-primary btn-lg btn-block col-md-3' %>
+      </div>
+      <div class="col-md-3">
+        <%= link_to "Join Us", "/#frontpage4", class: 'btn btn-primary btn-lg btn-block col-md-3' %>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="well">
-        <h2 class="text-center">Corporate Membership</h2>
-        <h4>Sign up for the pro account for £10,000 and get access to the community and contact information!</h4>
-        <%= link_to "Sign up as a Corporate", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
+  </div>
+
+
+  <div id="frontPage2">
+    <div class="row">
+      <div class="col-md-4 text-center well-clear service">
+        <h2>Connecting</h2>
+        <p>We connect migrant entrepreneurs through a network where they can share their experiences and challenges and feature their products and services.</p>
+        <%=image_tag("connecting2.jpg", alt: "Connecting image", class: "servicePic") %>
+      </div>
+      
+      <div class="col-md-4 text-center well-clear service">
+        <h2>Educating</h2>
+        <p>We promote migrant entrepreneurs and provide them with the necessary knowledge and skills needed for growing startups into successful businesses.</p>
+        <%=image_tag("educating2.jpg", alt: "Educating image", class: "servicePic") %>
+      </div>
+      
+      <div class="col-md-4 text-center well-clear service">
+        <h2>Developing</h2>
+        <p>We provide migrant entrepreneurs with access to professional mentoring and partnership opportunities with successful business leaders and coaches.</p>
+        <%=image_tag("developing2.jpg", alt: "Developing image", class: "servicePic") %>
       </div>
     </div>
-      <div class="col-md-4">
-      <div class="well">
-        <h2 class="text-center">Academic/NGO Membership</h2>
-        <h4>Sign up for free and get basic access to the community.</h4>
-        <br/>
-        <%= link_to "Sign up as an Academic/NGO", new_user_registration_path(plan: @academic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
+  </div>
+
+  <div id="frontPage3">
+    <div class="row">
+      <h3 class="text-center">By 2020 we aim to connect 2,020 migrant entrepreneurs around the world through our enabling platform.</h3>
+      <div class="col-md-2 col-md-offset-5">
+        <%= link_to "Join Us", "/#frontpage4", class: 'btn btn-clear btn-lg btn-block col-md-3' %>
       </div>
     </div>
-  <% end %>
-</div>
+  </div>
+
+
+  <div id="frontpage4">  
+    <div class="row options">
+      <% if user_signed_in? %>
+      
+        <div class="col-md-6">
+          <div class="well">
+            <h2 class="text-center">Your Profile</h2>
+            <% if current_user.profile %>
+              <%= link_to "Edit your profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
+              <%= link_to "View your profile", user_path(current_user), class: 'btn btn-default btn-lg btn-block' %>
+            <% else %>
+              <p>Create your profile so that you can share your information with the community.</p>
+              <%= link_to "Create your profile", new_user_profile_path(current_user), class: 'btn btn-default btn-lg btn-block'%>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="well">
+            <h2 class="text-center">The Community</h2>
+            <p>Visit the community to meet other developers, entrepreneurs, and investors!</p>
+            <%= link_to "Visit the community", users_path, class: 'btn btn-default btn-lg btn-block' %>
+          </div>
+        </div>
+        
+      <% else %>  
+      
+        <div class="col-md-4">
+          <div class="well-clear">
+            <h2 class="text-center">Entrepeneur Membership</h2>
+            <p class="text-center"><em>Free</em></p>
+            <h4><ul>
+              <li>Access Learning Programmes</li>
+              <li>Peer-to-peer Mentoring Scheme</li>
+              <li>Migrant Entrepreneurs Hub</li>
+            </ul></h4>
+            <br/>
+            <br/>
+            <%= link_to "Sign up as an Entrepeneur", new_user_registration_path(plan: @ent_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="well-clear">
+            <h2 class="text-center">Corporate Membership</h2>
+            <p class="text-center"><em>£10,000</em></p>
+            <h4><ul>
+              <li>Connect, Coach, Partner, Collaborate with entrepreneurs</li>
+              <li>Engage personally or through your CSR programmes</li>
+            </ul></h4>
+            <br/>
+            <%= link_to "Sign up as a Corporate", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
+          </div>
+        </div>
+          <div class="col-md-4">
+          <div class="well-clear">
+            <h2 class="text-center">Academic/NGO Membership</h2>
+            <p class="text-center"><em>Free</em></p>
+            <h4><ul>
+              <li>Offer talks, training courses, venues and other support</li>
+              <li>Develop case studies and media features</li>
+            </ul></h4>
+            <br/>
+            <%= link_to "Sign up as an Academic/NGO", new_user_registration_path(plan: @academic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>

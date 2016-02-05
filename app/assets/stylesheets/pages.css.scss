@@ -2,6 +2,108 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+    padding-top: 70px;
+    background-color: #f8f8f8;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: #054D7C;
+}
+
+a {
+    color: #f7941d;
+}
+
+.textColor {
+    color: #054D7C;
+}
+
+.favicon {
+    height: 20px;
+    width: 20px;
+    padding-right: 1px;
+}
+
+.btn-clear {
+    border: 2px solid #f7941d;
+}
+
+.btn-primary {
+    background-color: #054D7C;
+    border: 2px solid #054D7C;
+}
+
+.btn-success {
+    background-color: #f7941d;
+    border: 2px solid #f7941d;
+    color: #054D7C;
+}
+
+.logo {
+    height: 100px;
+    width:  80%;
+}
+
+// HomePage styles
+
+#frontPage1 {
+    background-image: url("home3.jpg");
+    height: 700px;
+    width: 100%;
+}
+
+#frontPage2 {
+    margin: 0px;
+}
+
+.servicePic {
+    height: 300px;
+    width: 340px;
+}
+
+.well-clear {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: #none;
+    border: 2px solid #054D7C;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+
+}
+
+.service {
+    border: none;
+}
+
+#frontPage3 {
+    background-color: #054D7C;
+    padding: 15px 0 20px 0;
+}
+
+#frontPage3 h3 {
+    padding: 0px 50px 0px 50px;
+    color: #F7941D;
+}
+
+#frontpage4 {
+    background-image: url("home.jpg");
+    height: 1000px;
+    width: 1140px;
+}
+
+.options {
+    padding: 75px 0 0 0;
+}
+
+
+
+// Team Page styles
+
 .profilePic {
   height: 300px;
   width: 300px;
