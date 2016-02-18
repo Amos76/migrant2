@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row">
+        <h2>Membership Options</h2>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6">
+          <div class="well-clear">
+            <h2 class="text-center">Entrepreneur Membership</h2>
+            <p class="text-center"><em>Free</em></p>
+            <h4><ul>
+              <li>Become a free member of the Migrant Entrepreneurs Network and share your story, entrepreneurial tips and products and services with your peers around the world.</li>
+              <li>Sign up for one of the learning programs offered by the Network, to keep up with global trends and best practices and to enhance your business skills.</li>
+              <li>Get involved in our peer-to-peer migrant entrepreneurs mentoring scheme and our business coaching programme.</li>
+              <li>Become active in establishing or supporting a national or city Migrant Entrepreneurs Hub.</li>
+            </ul></h4>
+            <br/>
+            <%= link_to "Sign up as an Entrepreneur", new_user_registration_path(plan: @ent_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="well-clear">
+            <h2 class="text-center">Corporate Membership</h2>
+            <p class="text-center"><em>£10,000</em></p>
+            <h4><ul>
+              <li>Become an individual or corporate member of the Migrant Entrepreneurs Network, to connect with migrant entrepreneurs of the country of your choice.</li>
+              <li>Volunteer to be a business leadership coach to one or more migrant entrepreneurs in the country or sector of your choice.</li>
+              <li>Support the Migrant Entrepreneurs Network financially and in-kind through your corporate social responsibility programme.</li>
+              <li>Explore opportunities to partner, collaborate or do business with migrant entrepreneurs around the world.</li>
+            </ul></h4>
+            <br/>
+            <%= link_to "Sign up as a Corporate", new_contact_path, class: 'btn btn-success btn-lg btn-block' %>
+          </div>
+        </div>
+    </div>
+    
+    <div class="row">    
+        <div class="col-md-6">
+          <div class="well-clear">
+            <h2 class="text-center">Academic/NGO Membership</h2>
+            <p class="text-center"><em>Free</em></p>
+            <h4><ul>
+              <li>Offer pro-bono talks, training courses, venues and other support for the Migrant Entrepreneurs Network, globally or through the national and city Hubs.</li>
+              <li>Develop case studies and media features that profile the inspiring stories migrant entrepreneurs in the Network and the challenges they face</li>
+            </ul></h4>
+            <br/>
+            <%= link_to "Sign up as an Academic/NGO", new_user_registration_path(plan: @academic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="well-clear">
+            <h2 class="text-center">Need More Information?</h2>
+            <br/>
+            <h4><ul>
+              <li>For more information on membership, or how to get involved with Migrant Entrepreneurs Network, please contact us</li>
+              <br/>
+            </ul></h4>
+            <br/>
+            <br/>
+            <br/>
+            <%= link_to "Get in Contact", new_contact_path, class: 'btn btn-primary btn-lg btn-block' %>
+          </div>
+        </div>
+    </div>
+    
+</div>

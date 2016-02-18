@@ -4,7 +4,7 @@
     <div class="row" >
       <div class="col-md-12">
         <p class="text-center"><%=image_tag("MigrantEnterpreneursLogoClear.png", alt: "Migrant Entrepreneurs Logo") %></p>
-        <h1 class="text-center">Welcome to The Migrant Entrepeneurs Network</h1>
+        <h1 class="text-center">Welcome to The Migrant Entrepreneurs Network</h1>
         <h3 class="text-center">Connecting. Educating. Developing.</h3>
       </div>
     </div>
@@ -71,7 +71,7 @@
         <div class="col-md-4">
           <div class="well-clear">
             <h2 class="text-center">The Community</h2>
-            <p>Visit the community to meet other developers, entrepreneurs, and investors!</p>
+            <p>Visit the community to meet other entrepreneurs, corporates, NGOs, and academics!</p>
             <%= link_to "Visit the community", users_path, class: 'btn btn-primary btn-lg btn-block' %>
           </div>
         </div>
@@ -80,16 +80,17 @@
       
         <div class="col-md-4">
           <div class="well-clear">
-            <h2 class="text-center">Entrepeneur Membership</h2>
+            <h2 class="text-center">Entrepreneur Membership</h2>
             <p class="text-center"><em>Free</em></p>
             <h4><ul>
               <li>Access Learning Programmes</li>
               <li>Peer-to-peer Mentoring Scheme</li>
               <li>Migrant Entrepreneurs Hub</li>
+              <br/>
+              <li class="learn"><%= link_to "Click here to learn more membership options", membership_path %></li>
             </ul></h4>
             <br/>
-            <br/>
-            <%= link_to "Sign up as an Entrepeneur", new_user_registration_path(plan: @ent_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
+            <%= link_to "Sign up as an Entrepreneur", new_user_registration_path(plan: @ent_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
           </div>
         </div>
         <div class="col-md-4">
@@ -99,9 +100,10 @@
             <h4><ul>
               <li>Connect, Coach, Partner, Collaborate with entrepreneurs</li>
               <li>Engage personally or through your CSR programmes</li>
+              <li class="learn"><%= link_to "Click here to learn more membership options", membership_path %></li>
             </ul></h4>
             <br/>
-            <%= link_to "Sign up as a Corporate", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
+            <%= link_to "Sign up as a Corporate", new_contact_path, class: 'btn btn-success btn-lg btn-block' %>
           </div>
         </div>
           <div class="col-md-4">
@@ -111,6 +113,7 @@
             <h4><ul>
               <li>Offer talks, training courses, venues and other support</li>
               <li>Develop case studies and media features</li>
+              <li class="learn"><%= link_to "Click here to learn more membership options", membership_path %></li>
             </ul></h4>
             <br/>
             <%= link_to "Sign up as an Academic/NGO", new_user_registration_path(plan: @academic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
