@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :contacts  
   get '/team' => 'pages#team'
   get '/about' => 'pages#about'
+  get '/projects' => 'pages#projects'
+  get '/resources' => 'pages#resources'
   
   root 'pages#home'
   
