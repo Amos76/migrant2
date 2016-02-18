@@ -1,7 +1,7 @@
 class Users::RegistrationsController < Devise::RegistrationsController
-  
+
   before_filter :select_plan, only: :new
-  
+
   def create
     super do |resource|
       if params[:plan]
@@ -14,15 +14,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
       end
     end
   end
-  
+
   private
+
   def select_plan
-    unless params[:plan] && (params[:plan] == '3' || params[:plan] == '4' || params[:plan] == '5')
+    plan_ids = Plan.pluck(:id)
+    unless plan_ids.include?(params[:plan].to_i)
       flash[:notice] = "Please select a membership plan to sign up."
       redirect_to root_url
     end
   end
-  
-  
-  
 end
