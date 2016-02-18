@@ -1,6 +1,7 @@
-
+<div class="container-fluid">
 
   <div id="frontPage1">
+    
     <div class="row" >
       <div class="col-md-12">
         <p class="text-center"><%=image_tag("MigrantEnterpreneursLogoClear.png", alt: "Migrant Entrepreneurs Logo") %></p>
@@ -10,10 +11,11 @@
     </div>
     
     <div class="row">
-      <div class="col-md-3 col-md-offset-3">
+      <div class="col-xs-6 col-sm-3 col-md-3 col-md-offset-3">
         <%= link_to "Learn More", "/#frontPage2", class: 'btn btn-primary btn-lg btn-block col-md-3' %>
       </div>
-      <div class="col-md-3">
+      
+      <div class="col-xs-6 col-sm-3 col-md-3">
         <%= link_to "Join Us", "/#frontpage4", class: 'btn btn-primary btn-lg btn-block col-md-3' %>
       </div>
     </div>
@@ -22,6 +24,7 @@
 
   <div id="frontPage2">
     <div class="row">
+      
       <div class="col-md-4 text-center well-clear service">
         <h2>Connecting</h2>
         <p>We connect migrant entrepreneurs through a network where they can share their experiences and challenges and feature their products and services.</p>
@@ -39,6 +42,7 @@
         <p>We provide migrant entrepreneurs with access to professional mentoring and partnership opportunities with successful business leaders and coaches.</p>
         <%=image_tag("developing2.jpg", alt: "Developing image", class: "servicePic") %>
       </div>
+      
     </div>
   </div>
 
@@ -53,10 +57,11 @@
 
 
   <div id="frontpage4">  
-    <div class="row options">
-      <% if user_signed_in? %>
+    
+    <% if user_signed_in? %>
       
-        <div class="col-md-4 col-md-offset-2">
+      <div class="row options">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-2">
           <div class="well-clear">
             <h2 class="text-center">Your Profile</h2>
             <% if current_user.profile %>
@@ -68,7 +73,8 @@
             <% end %>
           </div>
         </div>
-        <div class="col-md-4">
+        
+        <div class="col-xs-12 col-sm-6 col-md-4">
           <div class="well-clear">
             <h2 class="text-center">The Community</h2>
             <p>Visit the community to meet other entrepreneurs, corporates, NGOs, and academics!</p>
@@ -76,8 +82,11 @@
           </div>
         </div>
         
-      <% else %>  
+      </div>
       
+    <% else %>  
+      
+      <div class="row options">
         <div class="col-md-4">
           <div class="well-clear">
             <h2 class="text-center">Entrepreneur Membership</h2>
@@ -93,6 +102,7 @@
             <%= link_to "Sign up as an Entrepreneur", new_user_registration_path(plan: @ent_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
           </div>
         </div>
+        
         <div class="col-md-4">
           <div class="well-clear">
             <h2 class="text-center">Corporate Membership</h2>
@@ -106,7 +116,8 @@
             <%= link_to "Sign up as a Corporate", new_contact_path, class: 'btn btn-success btn-lg btn-block' %>
           </div>
         </div>
-          <div class="col-md-4">
+        
+        <div class="col-md-4">
           <div class="well-clear">
             <h2 class="text-center">Academic/NGO Membership</h2>
             <p class="text-center"><em>Free</em></p>
@@ -119,6 +130,10 @@
             <%= link_to "Sign up as an Academic/NGO", new_user_registration_path(plan: @academic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
           </div>
         </div>
-      <% end %>
-    </div>
+        
+      </div>  
+    <% end %>
+      
   </div>
+  
+</div>
