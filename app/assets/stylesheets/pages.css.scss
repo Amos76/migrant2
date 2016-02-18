@@ -96,8 +96,20 @@ a {
 
 #frontpage4 {
     background-image: url("home.jpg");
+    // background-size: cover;
     height: 1000px;
+    
     width: 100%;
+    background-repeat: no-repeat;
+
+    background-position: center center;
+    background-attachment: fixed;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .learn {
@@ -112,7 +124,11 @@ a {
 }
 
 .options {
-    padding: 75px 0 0 0;
+    padding: 35px 0 0 0;
+}
+
+.fill {
+    background-color: #ffffff;
 }
 
 
