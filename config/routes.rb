@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/about' => 'pages#about'
   get '/projects' => 'pages#projects'
   get '/resources' => 'pages#resources'
+  get '/membership' => 'pages#membership'
   
   root 'pages#home'
   
