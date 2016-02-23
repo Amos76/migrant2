@@ -11,6 +11,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
         else
           resource.save
         end
+        AdminMailer.new_sign_up(resource).deliver
       end
     end
   end
