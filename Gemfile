@@ -4,12 +4,18 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', group: [:development, :test]
 gem 'pg'
 
 # Use postgresql as the database for production
 group :production do
   gem 'rails_12factor'
+end
+
+group :development, :test do
+  gem 'pry'
+  gem 'pry-byebug'
+  gem 'sqlite3'
+  gem 'dotenv-rails'
 end
 
 #Use bootstrap for styles
@@ -38,6 +44,8 @@ gem 'sdoc', '0.4.0', group: :doc
 
 # Use Devise for user authentication
 gem 'devise', '3.5.5'
+# Adds the concept of roles to the app - e.g. a user can be an admin
+gem 'rolify'
 
 # Use stripe for handling payments
 gem 'stripe', '1.34.0'
