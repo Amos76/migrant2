@@ -1,4 +1,5 @@
 class AdminMailer < ActionMailer::Base
+  layout 'mail_layout'
   def new_sign_up(name, email)
     @name = name
     @email = email
