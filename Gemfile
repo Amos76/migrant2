@@ -54,3 +54,6 @@ gem 'figaro', '1.1.1'
 
 # Use paperclip for image uploads
 gem 'paperclip', '4.3.3'
+
+# Pageinates collection - e.g. the list of users for approval
+gem 'will_paginate', '~> 3.0.6'

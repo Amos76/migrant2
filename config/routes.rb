@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations' }
+  root 'pages#home'
   resources :users do
     resource :profile
   end
-  
-  resources :contacts  
+  resources :contacts
   get '/team' => 'pages#team'
   get '/about' => 'pages#about'
   get '/projects' => 'pages#projects'
@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   
   root 'pages#home'
   
+  resources :user_approvals, only: [:index, :create]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

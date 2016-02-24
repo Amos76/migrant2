@@ -1,0 +1,14 @@
+<h1>New users for approval</h1>
+<%= will_paginate @unapproved_users %>
+<table>
+  <tr>
+    <th>Email</th>
+    <th></th>
+  </tr>
+  <% @unapproved_users.each do |user| %>
+    <tr>
+      <td><%= user.email %></td>
+      <td><%= link_to 'Approve', user_approvals_path(id: user.id), method: :post %>
+    </tr>
+  <% end %>
+</table>
