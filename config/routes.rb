@@ -5,15 +5,12 @@ Rails.application.routes.draw do
     resource :profile
   end
   resources :contacts
+  resources :user_approvals, only: [:index, :create]
   get '/team' => 'pages#team'
   get '/about' => 'pages#about'
   get '/projects' => 'pages#projects'
   get '/resources' => 'pages#resources'
   get '/membership' => 'pages#membership'
-  
-  root 'pages#home'
-  
-  resources :user_approvals, only: [:index, :create]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
