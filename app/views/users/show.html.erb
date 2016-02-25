@@ -2,10 +2,10 @@
   <div class="col-md-3 text-center">
     <%= image_tag @user.profile.avatar.url, class: 'user-show-avatar' %>
   </div>
-  
+
   <div class="col-md-9">
     <h1><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1>
-    
+
     <div class="well profile-block profile-description">
       <h3>Profile</h3>
       <h5>Country of Residence</h5>
@@ -13,20 +13,20 @@
       <h5>Country of Origin</h5>
         <%= @user.profile.country_of_origin %>
       <h5>Business Owner?</h5>
-        <%= @user.profile.own_business %>
-      <h5>Starting a Business?</h5>
-        <%= @user.profile.starting_business %>
-          
+        <%= human_bool(@user.profile.own_business) %>
+      <h5>Starting a Busines?</h5>
+        <%= human_bool(@user.profile.starting_business) %>
+
       <h5>Nature of the Business(es)</h5>
         <%= @user.profile.business_nature %>
       <h5>Promotional Video Available</h5>
-        <%= @user.profile.promo_video %>
+        <%= human_bool(@user.profile.promo_video) %>
       <h5>Other Comments</h5>
         <%= @user.profile.other %><br/>
       <h5>Interested in which Service</h5>
         <h3><span class="services_interest_in_icon" ><%= services_interest_in_icon %></span><%= @user.profile.services_interest_in %><br/></h3>
     </div>
-    
+
     <% if current_user.plan_id == 3 %>
       <div class="well profile-block contact-info">
         <h3>Contact Info</h3>
@@ -34,6 +34,6 @@
         <%= @user.profile.contact_email %><br/>
       </div>
     <% end %>
-    
+
   </div>
 </div>
