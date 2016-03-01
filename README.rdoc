@@ -3,3 +3,16 @@
 Migrant Entrepreneur Network Project Application
 Subscription-based web application
 https://migrantentrepeneur.net
+
+# To make a users an admin
+
+Run:
+```
+rake users:create_admin them@example.com
+```
+
+Or for heroku app:
+
+```
+heroku run rake users:create_admin them@example.com
+```
