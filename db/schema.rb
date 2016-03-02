@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160223080511) do
+ActiveRecord::Schema.define(version: 20160302080136) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,7 +41,6 @@ ActiveRecord::Schema.define(version: 20160223080511) do
     t.boolean  "starting_business"
     t.text     "business_nature"
     t.string   "services_interest_in"
-    t.boolean  "promo_video"
     t.text     "other"
     t.string   "phone_number"
     t.string   "contact_email"
@@ -51,6 +50,7 @@ ActiveRecord::Schema.define(version: 20160223080511) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.text     "promo_video"
   end
 
   create_table "roles", force: :cascade do |t|

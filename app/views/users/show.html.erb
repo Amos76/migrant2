@@ -18,8 +18,10 @@
         <%= human_bool(@user.profile.starting_business) %>
       <h5>Nature of the Business(es)</h5>
         <%= @user.profile.business_nature %>
-      <h5>Promotional Video Available</h5>
-        <%= human_bool(@user.profile.promo_video) %>
+       <% if @user.profile.promo_video %>
+        <h5>Promotional Video</h5>
+        <%= @user.profile.promo_video %>
+       <% end %>
       <h5>Other Comments</h5>
         <%= @user.profile.other %><br/>
       <h5>Interested in which Service</h5>

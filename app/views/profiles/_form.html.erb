@@ -36,8 +36,8 @@
           <%= f.select :services_interest_in, ['Mentorship', 'Mentee', 'Training', 'Partnership'], {}, class: 'form-control' %>
         </div>
         <div class="check-box">
-          <%= f.label "Do you have a promotional video?" %>
-          <%= f.select :promo_video, ['Yes', 'No'], {}, class: 'form-control' %>
+          <%= f.label "Link to promotional video if you have one" %>
+          <%= f.text_field :promo_video, class: 'form-control' %>
         </div>
         <div class="form-group">
           <%= f.label "Any other comments?" %>
