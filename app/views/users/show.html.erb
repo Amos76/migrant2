@@ -20,7 +20,7 @@
         <%= @user.profile.business_nature %>
        <% if @user.profile.promo_video %>
         <h5>Promotional Video</h5>
-        <%= @user.profile.promo_video %>
+        <%= link_to @user.profile.promo_video, @user.profile.promo_video %>
        <% end %>
       <h5>Other Comments</h5>
         <%= @user.profile.other %><br/>
