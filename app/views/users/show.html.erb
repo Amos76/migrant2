@@ -26,6 +26,10 @@
         <%= @user.profile.other %><br/>
       <h5>Interested in which Service</h5>
         <h3><span class="services_interest_in_icon" ><%= services_interest_in_icon %></span><%= @user.profile.services_interest_in %><br/></h3>
+      <% if @user.profile.linked_in %>
+        <h5>LinkedIn Profile</h5>
+          <%= link_to @user.profile.linked_in, @user.profile.linked_in %><br/>
+        <% end %>
     </div>
 
     <% if current_user.plan_id == 3 %>

@@ -16,7 +16,7 @@ class UserApprovalsController < ApplicationController
     user = User.find(user_id)
     approved = user.add_role(:approved)
     if approved
-      UserMail.approved(user)
+      UserMailer.approved(user)
       redirect_to user_approvals_path
     else
       flash[:notice] = "There was an error while approving this user"
