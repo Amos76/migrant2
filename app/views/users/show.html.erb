@@ -20,7 +20,7 @@
         <%= @user.profile.business_nature %>
        <% if @user.profile.promo_video %>
         <h5>Promotional Video</h5>
-        <%= link_to @user.profile.promo_video, @user.profile.promo_video %>
+        <%= link_to @user.profile.promo_video, target: "_blank", @user.profile.promo_video %>
        <% end %>
       <h5>Other Comments</h5>
         <%= @user.profile.other %><br/>
@@ -28,7 +28,7 @@
         <h3><span class="services_interest_in_icon" ><%= services_interest_in_icon %></span><%= @user.profile.services_interest_in %><br/></h3>
       <% if @user.profile.linked_in %>
         <h5>LinkedIn Profile</h5>
-          <%= link_to @user.profile.linked_in, @user.profile.linked_in %><br/>
+          <%= link_to @user.profile.linked_in, target: "_blank", @user.profile.linked_in %><br/>
         <% end %>
     </div>
 
