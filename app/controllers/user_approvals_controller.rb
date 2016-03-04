@@ -15,6 +15,7 @@ class UserApprovalsController < ApplicationController
     user_id = params[:id].to_i
     user = User.find(user_id)
     approved = user.add_role(:approved)
+    user.add_role(:admin) if params[:admin]
     if approved
       UserMailer.approved(user)
       redirect_to user_approvals_path

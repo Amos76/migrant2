@@ -5,12 +5,14 @@
     <tr>
       <th>Email</th>
       <th>Approve?</th>
+      <th>Make admin</th>
     </tr>
   </thead>
   <% @unapproved_users.each_with_index do |user, idx| %>
     <tr class="<%= 'pure-table-odd' if idx.odd? %>">
       <td><%= user.email %></td>
       <td><%= link_to 'Yes', user_approvals_path(id: user.id), method: :post %>
+      <td><%= link_to 'Make admin', user_approvals_path(id: user.id, admin: true), method: :post %>
     </tr>
   <% end %>
 </table>

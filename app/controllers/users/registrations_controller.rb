@@ -8,10 +8,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
         resource.plan_id = params[:plan]
         if resource.plan_id == 3
           resource.save_with_payment
+          send_email(resource)
         else
           resource.save
+          send_email(resource)
         end
-        AdminMailer.new_sign_up(resource).deliver
+        sign_out resource
       end
     end
   end
@@ -24,5 +26,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
       flash[:notice] = "Please select a membership plan to sign up."
       redirect_to root_url
     end
+  end
+
+  def send_email(user)
+    AdminMailer.new_sign_up(user).deliver
   end
 end
