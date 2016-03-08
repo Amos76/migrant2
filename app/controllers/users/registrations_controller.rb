@@ -1,5 +1,8 @@
 class Users::RegistrationsController < Devise::RegistrationsController
 
+  def after_sign_in_path_for(resource)
+    new_user_profile_path(user_id: current_user.id)
+  end
   before_filter :select_plan, only: :new
 
   def create
