@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Email</th>
+      <th>Profile</th>
       <th>Approve?</th>
       <th>Reject?</th>
       <th>Make admin</th>
@@ -12,6 +13,11 @@
   <% @unapproved_users.each_with_index do |user, idx| %>
     <tr class="<%= 'pure-table-odd' if idx.odd? %>">
       <td><%= user.email %></td>
+      <% if user.profile %>
+        <td><%= link_to "Profile", user_path(id: user.id) %></td>
+      <% else %>
+        <td></td>
+      <% end %>
       <td><%= link_to 'Approve', user_approvals_path(id: user.id), method: :post %>
       <td><%= link_to 'Reject', user_approval_path(id: user.id), confirm: "Are you sure?", method: :delete %>
       <td><%= link_to 'Make admin', user_approvals_path(id: user.id, admin: true), method: :post %>
