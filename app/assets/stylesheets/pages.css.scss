@@ -132,7 +132,21 @@ a {
     background-color: #ffffff;
 }
 
+// About Page styles
 
+.about {
+    padding: 40px 0 40px 0;
+}
+
+.spacer {
+    border-left:3px #f8f8f8;
+    border-right:3px #f8f8f8;
+    border-radius: 0px;
+}
+
+.noBullet {
+    list-style-type:none;
+}
 
 // Team Page styles
 
