@@ -20,7 +20,10 @@
                 <h2><%= user.profile.first_name %> <%= user.profile.last_name %></h2>
               <% end %>
                 <p>
-                  <b><%= user.plan.name %></b>
+                  <b>
+                    <%= user.plan.name %>
+                    <%= user.profile.business_name_present %>
+                  </b>
                 </p>
                 <p>
                   <%= user.profile.services_interest_in %>
