@@ -6,6 +6,7 @@ class UserApprovalsController < ApplicationController
       rejected_users = User.with_role(:rejected).pluck(:id)
       @unapproved_users = User.where.not(id: approved_users)
         .where.not(id: rejected_users)
+        .where.not(id: current_user.id)
         .paginate(:page => params[:page])
     else
       flash[:notice] = "You are not permitted on this page"
