@@ -3,7 +3,9 @@ class UserApprovalsController < ApplicationController
     # Good god this is ugly
     if current_user && current_user.has_role?(:admin)
       approved_users = User.with_role(:approved).pluck(:id)
+      rejected_users = User.with_role(:rejected).pluck(:id)
       @unapproved_users = User.where.not(id: approved_users)
+        .where.not(id: rejected_users)
         .paginate(:page => params[:page])
     else
       flash[:notice] = "You are not permitted on this page"
@@ -23,5 +25,13 @@ class UserApprovalsController < ApplicationController
       flash[:notice] = "There was an error while approving this user"
       redirect_to user_approvals_path
     end
+  end
+
+  def destroy
+    user_id = params[:id].to_i
+    user = User.find(user_id)
+    user.add_role(:rejected)
+    flash[:notice] = "This user has been rejected"
+    redirect_to user_approvals_path
   end
 end

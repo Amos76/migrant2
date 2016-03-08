@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resource :profile
   end
   resources :contacts
-  resources :user_approvals, only: [:index, :create]
+  resources :user_approvals, only: [:index, :create, :destroy]
   get '/team' => 'pages#team'
   get '/about' => 'pages#about'
   get '/projects' => 'pages#projects'
