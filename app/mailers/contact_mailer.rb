@@ -4,6 +4,8 @@ class ContactMailer < ActionMailer::Base
     @name = name
     @email = email
     @body = body
-    mail(from: email, subject: 'Contact Form Message')
+    User.with_role(:admin).each do |admin|
+      mail(to: admin.email, subject: 'Contact Form Message')
+    end
   end
 end
