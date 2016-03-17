@@ -1,11 +1,10 @@
 class PagesController < ApplicationController
 
+  before_action :load_plans, only: [:home, :membership]
+
   def home
-    @ent_plan = Plan.find_by_name('Entrepeneur')
-    @academic_plan = Plan.find_by_name('Academic/NGO')
-    @pro_plan = Plan.find_by_name('Corporate')
   end
-  
+
   def about
   end
 
@@ -14,11 +13,16 @@ class PagesController < ApplicationController
 
   def post_sign_up
   end
-  
+
   def membership
-    @ent_plan = Plan.find(4)
-    @academic_plan = Plan.find(5)
-    @pro_plan = Plan.find(3)
+  end
+
+  private
+
+  def load_plans
+    @ent_plan = Plan.find_by_name('Entrepeneur')
+    @academic_plan = Plan.find_by_name('Expert')
+    @pro_plan = Plan.find_by_name('Corporate')
   end
 
 end
