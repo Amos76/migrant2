@@ -11,6 +11,9 @@ class PagesController < ApplicationController
 
   def team
   end
+
+  def post_sign_up
+  end
   
   def membership
     @ent_plan = Plan.find(4)
