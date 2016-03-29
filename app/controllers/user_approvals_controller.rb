@@ -20,7 +20,7 @@ class UserApprovalsController < ApplicationController
     approved = user.add_role(:approved)
     user.add_role(:admin) if params[:admin]
     if approved
-      UserMailer.approved(user)
+      UserMailer.approved(user).deliver_now
       redirect_to user_approvals_path
     else
       flash[:notice] = "There was an error while approving this user"

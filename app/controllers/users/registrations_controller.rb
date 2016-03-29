@@ -32,6 +32,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def send_email(user)
-    AdminMailer.new_sign_up(user).deliver
+    AdminMailer.new_sign_up(user).deliver_now
   end
 end
