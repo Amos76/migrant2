@@ -5,11 +5,11 @@ class UserMailer < ActionMailer::Base
   def sign_up(user)
     @name = name
     @email = email
-    @body = "Thanks for signing up to the Migrant Network."
+    @body = "Thanks for signing up to the Migrant Entrepreneurs Network."
     mail(to: email, subject: 'Thanks for signing up')
   end
 
   def approved(user)
-    mail(to: user.email, subject: 'Your application to the migrant network has been approved')
+    mail(to: user.email, subject: 'Your application to the Migrant Entrepreneurs Network has been approved')
   end
 end
