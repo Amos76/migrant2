@@ -1,6 +1,6 @@
 # Welcome to Migrant rails app
 
-## Make a user a admin
+## Make a user an admin
 
 Run from the command line:
 
