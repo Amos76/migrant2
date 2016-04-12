@@ -54,6 +54,9 @@ gem 'figaro', '1.1.1'
 
 # Use paperclip for image uploads
 gem 'paperclip', '4.3.3'
+# aws-sdk for uploads to amazon
+gem 'aws-sdk'
+
 
 # Pageinates collection - e.g. the list of users for approval
 gem 'will_paginate', '~> 3.0.6'
