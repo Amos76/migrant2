@@ -30,6 +30,7 @@ class ProfilesController < ApplicationController
         flash[:success] = "Profile Updated!"
         redirect_to user_path( params[:user_id] )
       else
+        flash[:error] = @profile.errors.full_messages.join (", ")
         render action: :edit
       end
     end
