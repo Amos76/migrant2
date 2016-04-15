@@ -5,6 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-[{name: 'Entrepeneur', cost: 0}, {name: 'Corporate', cost: 10000}, {name: 'Expert', cost: 0}].each do |memb|
+[{name: 'Entrepreneur', cost: 0}, {name: 'Corporate', cost: 10000}, {name: 'Expert', cost: 0}].each do |memb|
   Plan.create!(name: memb[:name], price: memb[:cost])
 end

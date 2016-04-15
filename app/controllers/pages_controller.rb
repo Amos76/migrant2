@@ -20,7 +20,7 @@ class PagesController < ApplicationController
   private
 
   def load_plans
-    @ent_plan = Plan.find_by_name('Entrepeneur')
+    @ent_plan = Plan.find_by_name('Entrepreneur')
     @academic_plan = Plan.find_by_name('Expert')
     @pro_plan = Plan.find_by_name('Corporate')
   end
