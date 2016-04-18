@@ -38,7 +38,7 @@
       <% end %>
     </div>
 
-    <% if current_user.plan_id == 3 %>
+    <% if current_user.plan_id == 3 || current_user.has_role?(:admin) %>
       <div class="well profile-block contact-info">
         <h3>Contact Info</h3>
         <%= @user.profile.phone_number %><br/>
