@@ -5,7 +5,8 @@ class ContactMailer < ActionMailer::Base
     @email = email
     @body = body
     User.with_role(:admin).each do |admin|
-      mail(from: ENV['FROM_EMAIL'], to: admin.email, subject: 'Contact Form Message')
+      mail(from: ENV['FROM_EMAIL'], to: admin.email,
+           subject: 'Contact Form Message', reply_to: @email)
     end
   end
 end
